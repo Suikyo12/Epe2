@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Atenciones Médicas</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Registro de Atenciones Médicas</h1>
+
+    <form id="atencionForm">
+        <input type="text" id="pacienteNombre" placeholder="Nombre del Paciente" required>
+        <input type="text" id="medicoNombre" placeholder="Nombre del Médico" required>
+        <select id="especialidad" required>
+            <option value="">Seleccione Especialidad</option>
+            <!-- Opciones de especialidades -->
+            <option value="1">Cirugía</option>
+            <option value="2">Pediatría</option>
+            <option value="3">Medicina General</option>
+            <option value="4">Fonoaudiologia</option>
+            <option value="5">Kinesiologia</option>
+            <option value="6">Terapia Ocupacional</option>
+        </select>
+        <select id="actividad" required>
+            <option value="">Seleccione Actividad</option>
+            <!-- Opciones de actividades -->
+            <option value="1">Curaciones</option>
+            <option value="2">Toma de exámenes</option>
+            <option value="2">Lectura de recetas</option>
+            <option value="2">Terapia</option>
+            <option value="2">Atencion</option>
+        </select>
+        <input type="date" id="fecha_ingreso" required>
+        <input type="date" id="fecha_alta" required>
+        <input type="text" id="diagnostico" placeholder="Diagnóstico">
+        <input type="hidden" id="atencion_id"> <!-- Para guardar el ID al editar -->
+        <button type="submit">Guardar Atención</button>
+    </form>
+
+    <!-- Tabla para mostrar las atenciones -->
+    <table id="atencionesTable">
+        <thead>
+            <tr>
+                <th>Paciente</th>
+                <th>Médico</th>
+                <th>Especialidad</th>
+                <th>Actividad</th>
+                <th>Fecha Ingreso</th>
+                <th>Fecha Alta</th>
+                <th>Diagnóstico</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <!--scripts JS -->
+    <script src="script.js"></script> 
+</body>
+</html>
